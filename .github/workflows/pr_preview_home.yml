@@ -1,0 +1,11 @@
+# tattoo_frontend/.github/workflows/pr_preview_home.yml
+name: PR Preview (Home smoke)
+on:
+  pull_request:
+    branches: [ "**" ]
+jobs:
+  preview-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Home route preview checks are stubbed (LHCI to wire later)."

@@ -1,0 +1,16 @@
+# tattoo_frontend/.github/workflows/pr_lint.yml
+name: PR Lint (analyze)
+on:
+  pull_request:
+    branches: [ "**" ]
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { channel: stable }
+      - name: Pub get (root)
+        run: flutter pub get
+      - name: Dart analyze
+        run: dart analyze .

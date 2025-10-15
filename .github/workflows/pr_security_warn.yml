@@ -1,0 +1,14 @@
+# tattoo_frontend/.github/workflows/pr_security_warn.yml
+name: PR Security (warn)
+on:
+  pull_request:
+    branches: [ "**" ]
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: SBOM (placeholder)
+        run: echo "CycloneDX/Syft to be added; warn-only."
+      - name: Secret scan (placeholder)
+        run: echo "gitleaks/semgrep to be added; warn-only."

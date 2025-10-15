@@ -1,0 +1,2 @@
+# tattoo_frontend/apps/app_web/analysis_options.yaml
+include: ../../analysis_options.yaml

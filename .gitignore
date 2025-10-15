@@ -1,0 +1,33 @@
+# tattoo_frontend/.gitignore
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# Dart / Flutter
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.melos_tool/
+
+# Build & Coverage
+build/
+**/build/
+coverage/
+**/coverage/
+
+# Web/Flutter generated trivia
+**/generated_plugin_registrant.dart
+
+# Reports & SBOM outputs (README는 보존)
+reports/**
+!reports/**/README.md
+compliance/sbom/**
+!compliance/sbom/.gitkeep
+
+# Lockfiles: 앱/루트는 커밋, packages/* 은 무시
+packages/**/pubspec.lock

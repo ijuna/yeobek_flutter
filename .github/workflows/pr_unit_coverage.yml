@@ -1,0 +1,18 @@
+# tattoo_frontend/.github/workflows/pr_unit_coverage.yml
+name: PR Unit & Coverage
+on:
+  pull_request:
+    branches: [ "**" ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { channel: stable }
+      - run: flutter pub get
+      - run: flutter test --coverage
+      - name: Show coverage summary
+        run: |
+          genhtml coverage/lcov.info -o coverage/html || true
+          echo "::notice title=Coverage::Report generated (non-blocking)."

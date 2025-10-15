@@ -1,0 +1,13 @@
+# tattoo_frontend/melos.yaml
+name: tattoo_frontend
+packages:
+  - apps/**
+  - packages/**
+  - app_l10n
+command:
+  bootstrap:
+    usePubspecOverrides: true
+scripts:
+  analyze: dart analyze .
+  test: flutter test --coverage
+  gen: dart run build_runner build --delete-conflicting-outputs
