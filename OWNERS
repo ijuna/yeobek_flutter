@@ -1,6 +1,0 @@
-# tattoo_frontend/OWNERS
-# High-level ownership & review/merge policy notes (non-enforced doc)
-approvers:
-  - juna
-rules:
-  - "Two reviewers for core_domain changes"

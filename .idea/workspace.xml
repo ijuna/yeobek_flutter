@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d55ab40c-fca0-4e36-bdf6-bbc69a8994ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/junafront.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr_lint.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows/pr_lint.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr_preview_home.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows/pr_preview_home.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr_security_warn.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows/pr_security_warn.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr_unit_coverage.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows/pr_unit_coverage.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows_disabled/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows_disabled/pr_e2e_quarantine.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows_disabled/pr_e2e_quarantine.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows_disabled/pr_e2e_stable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows_disabled/pr_e2e_stable.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows_disabled/pr_preview_checks.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows_disabled/pr_preview_checks.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows_disabled/pr_security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows_disabled/pr_security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CODEOWNERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OWNERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_l10n/l10n/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_l10n/lib/src/gen/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.github/workflows_disabled/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_l10n/usage/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/compliance/LICENSES/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_web/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_web/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compliance/LICENSES/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/compliance/privacy/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compliance/privacy/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/compliance/sbom/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compliance/sbom/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/compliance/waivers/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compliance/waivers/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/environments/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/architecture.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/environments/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/release/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environments/dev.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/environments/dev.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environments/prod.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/environments/prod.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environments/stage.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/environments/stage.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/melos.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/melos.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core_domain/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/docs/security/threat-model/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core_interfaces/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core_domain/lib/core_domain.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core_util/lib/migrations/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core_domain/lib/src/value_objects.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design_system/lib/internal/sandbox/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core_domain/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design_system/lib/internal/stories/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core_interfaces/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design_system/lib/public/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design_system/lib/public/foundations/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design_system/lib/public/templates/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design_system/lib/public/theme/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design_system/lib/public/tokens/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_artist_data_http/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_artist_domain/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_artist_presentation/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_catalog_data_http/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_catalog_domain/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_catalog_presentation/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_post_data_http/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_post_domain/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/feature_post_presentation/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/networking_dio/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/observability/lib/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/observability/specs/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/storage_hive_mobile/lib/migrations/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/storage_hive_web/lib/migrations/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/release/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/storage_hive/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/arch/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/e2e/helpers/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/e2e/specs/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/golden/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threat-model/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/kotlin/juna/fe/tattooya/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/ios/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib/config/style.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib/pages/main_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib/pages/my_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib/pages/recommendation_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib/pages/search_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib/utils/api.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib/widgets/home_root.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/app.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/config/app_env.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/error/app_exception.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/error/result.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/localization/l10n.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/logging/riverpod_observer.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/responsive/breakpoints.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/routing/app_router.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/theme/app_theme.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/core/theme/typography.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/data/cache/cache_provider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/data/http/dio_client.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/data/http/dio_provider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/data/http/interceptors/auth_interceptor.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/data/http/interceptors/log_interceptor.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/data/http/interceptors/retry_interceptor.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/data/http/retrofit_client.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/data/storage/prefs.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/controller/home_controller.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/data/api/home_api.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/data/mapper/home_mapper.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/data/models/tattoo_item.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/home_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/repository/home_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/widgets/header_bar.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/widgets/model_board_panel.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/widgets/popular_grid_panel.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/features/home/widgets/tattooist_list_panel.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/l10n/app_en.arb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/l10n/app_ko.arb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/main_web.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/shared/utils/formatters.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/shared/widgets/atoms.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/lib_web/shared/widgets/error_view.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/test/sandbox_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/web/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tattooya/web/manifest.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="343efvaScc6sTeGIbJYFwf6aPOR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/Juna/junafront/tattoo_frontend/packages/core_domain&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/core_domain" />
+      <recent name="$PROJECT_DIR$/packages/storage_hive" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/security" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d55ab40c-fca0-4e36-bdf6-bbc69a8994ed" name="Changes" comment="" />
+      <created>1760446789148</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760446789148</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

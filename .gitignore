@@ -2,7 +2,7 @@
 
 # OS / IDE
 .DS_Store
-.idea/
+docs/.idea/
 .vscode/
 *.iml
 
@@ -24,10 +24,10 @@ coverage/
 **/generated_plugin_registrant.dart
 
 # Reports & SBOM outputs (README는 보존)
-reports/**
-!reports/**/README.md
-compliance/sbom/**
-!compliance/sbom/.gitkeep
+docs/reports/**
+!docs/reports/**/README.md
+docs/compliance/sbom/**
+!docs/compliance/sbom/.gitkeep
 
 # Lockfiles: 앱/루트는 커밋, packages/* 은 무시
 packages/**/pubspec.lock

@@ -1,0 +1,12 @@
+name: storage_hive
+description: Unified storage API with Hive (mobile/web)
+publish_to: "none"
+version: 0.1.0
+environment: { sdk: ">=3.9.0 <4.0.0" }
+dependencies:
+  flutter: { sdk: flutter }
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
