@@ -18,6 +18,19 @@ melos-test:
 	dart run melos run test      # (test 스크립트 있다면)
 
 
+bootstrap:
+	dart run melos bootstrap
+
+build-clean:
+	dart run build_runner clean
+
+build:
+	dart run build_runner build-d
+
+dummyrun:
+	flutter run -d chrome --dart-define=API_BASE_URL=https://dummyjson.com
+
+
 
 
 

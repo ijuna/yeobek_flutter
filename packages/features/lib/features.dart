@@ -1,4 +1,5 @@
-library features;
-export 'src/artist/presentation/artist_screen.dart';
-export 'src/catalog/presentation/catalog_screen.dart';
-export 'src/post/presentation/post_screen.dart';
+// tattoo_frontend/packages/features/lib/features.dart
+export 'src/artist/domain/artist_entity.dart';
+export 'src/artist/domain/artist_repo.dart';
+export 'src/artist/domain/usecases/get_artist_by_id.dart';
+export 'artist_module.dart';

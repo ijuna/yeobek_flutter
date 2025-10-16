@@ -365,3 +365,25 @@ core_domain	Dart	lib/core_domain.dart	lib/src	도메인 프리미티브
 core_interfaces	Dart	lib/core_interfaces.dart	lib/src	추상 포트(Repo 등)
 core_utils	Dart	lib/core_utils.dart	lib/src	유틸/익스텐션
 observability	Dart	lib/observability.dart	lib/src	로깅 헬퍼
+
+
+
+
+//domain쪽
+packages/features/
+└─ lib/
+├─ features.dart
+├─ artist_module.dart           # 앱에서 바로 쓰는 모듈 팩토리(선택)
+└─ src/artist/
+├─ domain/
+│  ├─ artist_entity.dart            # 엔티티
+│  ├─ artist_repo.dart        # ⚑ 인터페이스(계약)
+│  └─ usecases/
+│     └─ get_artist_by_id.dart      # 유스케이스
+└─ data/
+├─ remote/
+│  ├─ artist_api.dart            # Retrofit API 선언
+│  └─ dto/artist_dto_remote.dart        # DTO + toDomain()
+├─ local/
+│  └─ artist_local.dart   # (나중에) Hive/IndexedDB용
+└─ artist_repo_impl.dart
