@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55ab40c-fca0-4e36-bdf6-bbc69a8994ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/network/lib/src/retrofit_config.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-options.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_web/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/artist_module.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/artist_module.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/data/artist_repo_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/artist_repo_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/artist_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/artist_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/dto/artist_dto_remote.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/dto/artist_dto_remote.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_entity.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/usecases/get_artist_by_id.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/usecases/get_artist_by_id.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network/lib/network.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network/lib/network.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network/lib/src/http/dio_client.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
