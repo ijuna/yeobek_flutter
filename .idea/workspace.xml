@@ -5,26 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55ab40c-fca0-4e36-bdf6-bbc69a8994ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/features/lib/artist_module.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/artist_repo_impl.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/local/artist_local.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/artist_api.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/dto/artist_dto_remote.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_repo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/usecases/get_artist_by_id.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/melos_flutter_test_features.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/network/lib/src/retrofit_config.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/app_web/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_web/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_web/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_web/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/features.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/features.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/data/artist_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/lib/artist_module.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/artist_module.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/data/artist_repo_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/artist_repo_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/artist_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/artist_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/dto/artist_dto_remote.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/data/remote/dto/artist_dto_remote.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_entity.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/presentation/artist_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/features/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/artist_repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/usecases/get_artist_by_id.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/features/lib/src/artist/domain/usecases/get_artist_by_id.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/network/lib/network.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network/lib/network.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/network/lib/src/http/dio_client.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,18 +37,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ijuna"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ijuna&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ijuna/tattoo_frontend.git",
-    "accountId": "82ff8bbe-9033-4447-ae2e-d54dc2be14cc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ijuna/tattoo_frontend.git&quot;,
+    &quot;accountId&quot;: &quot;82ff8bbe-9033-4447-ae2e-d54dc2be14cc&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -86,7 +79,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   },
   "keyToStringList": {

@@ -1,41 +1,42 @@
-// tattoo_frontend/apps/app_web/lib/main.dart
+// apps/app_web/lib/main.dart (예시 - 참고)
 import 'package:flutter/material.dart';
-import 'package:features/features.dart';
+import 'package:features/features.dart';   // 배럴이 있다면 모듈/유즈케이스를 export
+import 'package:network/network.dart';
 
-late final ArtistModule artist; // 데모용 전역
-
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  artist = ArtistModule.defaultClient(); // ✅ Dio 주입 없이 사용
-  runApp(const MaterialApp(home: HomePage()));
+
+  // (선택) 전역 네트워크 정책 장착
+  setupNetwork(
+    // baseUrl: 'https://dummyjson.com', // 기본값이면 생략
+    enableLogging: true,
+    retryCount: 2,
+    tokenProvider: () async => null,
+  );
+
+  runApp(const AppRoot());
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  late final Future<ArtistEntity> _future;
-
-  @override
-  void initState() {
-    super.initState();
-    _future = artist.getArtistById(1); // dummyjson /users/1
-  }
+class AppRoot extends StatelessWidget {
+  const AppRoot({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Dummy Artist')),
-      body: Center(
-        child: FutureBuilder<ArtistEntity>(
-          future: _future,
+    final artist = ArtistModule.defaultClient(); // 조립 완료된 모듈
+
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Artist Demo')),
+        body: FutureBuilder(
+          future: artist.getArtistById(1),
           builder: (context, snap) {
-            if (snap.connectionState != ConnectionState.done) return const CircularProgressIndicator();
-            if (snap.hasError) return Text('에러: ${snap.error}');
-            return Text('dummyArtist=${snap.data!.name}');
+            if (!snap.hasData) return const Center(child: CircularProgressIndicator());
+            final a = snap.data!;
+            return ListTile(
+              leading: CircleAvatar(backgroundImage: NetworkImage(a.avatarUrl)),
+              title: Text(a.name),
+              subtitle: Text('id=${a.id}'),
+            );
           },
         ),
       ),

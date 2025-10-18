@@ -17,6 +17,14 @@ melos-test:
 	dart run melos run analyze   # (선택) 정적 분석
 	dart run melos run test      # (test 스크립트 있다면)
 
+go1:
+	make bootstrap
+	cd packages/features
+	make build-clean
+	make build
+	cd apps/app_web
+	make dummy-run
+
 
 bootstrap:
 	dart run melos bootstrap
@@ -25,34 +33,44 @@ build-clean:
 	dart run build_runner clean
 
 build:
-	dart run build_runner build-d
+	dart run build_runner build -d
 
-dummyrun:
+dummy-run:
 	flutter run -d chrome --dart-define=API_BASE_URL=https://dummyjson.com
 
 
+# Melos bootstrap 후, features와 app_web을 순차적으로 빌드하고 실행합니다.
+go1:
+	@echo "=> Bootstrapping Melos..."
+	@dart run melos bootstrap
+	@echo "\n=> Running build_runner in packages/features..."
+	@cd packages/features && dart run build_runner clean && dart run build_runner build -d
+	@echo "\n=> Running Flutter web app (app_web)..."
+	@cd apps/app_web && flutter run -d chrome --dart-define=API_BASE_URL=https://dummyjson.com
+
+.PHONY: go1
 
 
 
-
-
-
-## Chrome 설치
-sudo apt-get update
-sudo apt-get install -y chromium || sudo apt-get install -y chromium-browser
-export CHROME_EXECUTABLE="$(which chromium || which chromium-browser)"
-echo 'export CHROME_EXECUTABLE="$(which chromium || which chromium-browser)"' >> ~/.zshrc
-echo 'export CHROME_EXECUTABLE="$(which chromium || which chromium-browser)"' >> ~/.bashrc
-flutter doctor
-cd /workspaces/tattoo_frontend/apps/app_web
-flutter run -d chrome
-
-
-#flutter
-export PATH="$HOME/flutter/bin:$PATH"
-#로그인시 잡혀라
-echo 'export PATH="$HOME/flutter/bin:$PATH"' >> ~/.bashrc
-echo 'export PATH="$HOME/flutter/bin:$PATH"' >> ~/.zshrc
-bash -l
-# 또는
-source ~/.bashrc
+#
+#
+#
+### Chrome 설치
+#sudo apt-get update
+#sudo apt-get install -y chromium || sudo apt-get install -y chromium-browser
+#export CHROME_EXECUTABLE="$(which chromium || which chromium-browser)"
+#echo 'export CHROME_EXECUTABLE="$(which chromium || which chromium-browser)"' >> ~/.zshrc
+#echo 'export CHROME_EXECUTABLE="$(which chromium || which chromium-browser)"' >> ~/.bashrc
+#flutter doctor
+#cd /workspaces/tattoo_frontend/apps/app_web
+#flutter run -d chrome
+#
+#
+##flutter
+#export PATH="$HOME/flutter/bin:$PATH"
+##로그인시 잡혀라
+#echo 'export PATH="$HOME/flutter/bin:$PATH"' >> ~/.bashrc
+#echo 'export PATH="$HOME/flutter/bin:$PATH"' >> ~/.zshrc
+#bash -l
+## 또는
+#source ~/.bashrc
