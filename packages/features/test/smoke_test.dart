@@ -4,7 +4,7 @@ import 'package:features/features.dart';
 void main() {
   test('Feature screens are constructible', () {
     expect(const ArtistScreen(), isNotNull);
-    expect(const CatalogScreen(), isNotNull);
-    expect(const PostScreen(), isNotNull);
+    expect(const ArtworksScreen(), isNotNull);
+    expect(const BoardScreen(), isNotNull);
   });
 }

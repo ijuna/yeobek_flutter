@@ -1,15 +1,50 @@
 // tattoo_frontend/packages/features/lib/src/artist/domain/artist_repo.dart
-//
-// 역할: "Repo 인터페이스(계약)"
-// - 유즈케이스가 의존하는 추상 포트.
-// - 구현체(Remote/Local/Cached)는 언제든 바뀔 수 있다.
-// - HTTP/Dio/Retrofit 같은 세부는 여기서 알지 못한다.
-
 import 'artist_entity.dart';
 
 abstract interface class ArtistRepo {
-  /// 입력: id(int)
-  /// 출력: Future<ArtistEntity>
-  /// 책임: 데이터 획득 전략을 숨기고, 도메인 엔티티를 제공한다.
-  Future<ArtistEntity> getById(int id);
+  /// GET /artist/ping
+  Future<String> getArtistPing();
+  
+  /// POST /artist/create
+  Future<int> postArtistCreate({
+    required String name,
+    required String instaId,
+    required int followers,
+    required List<String> tags,
+  });
+  
+  /// GET /artist?instaId=... 또는 ?name=...
+  Future<ArtistEntity> getArtist({String? instaId, String? name});
+  
+  /// PUT /artist
+  Future<void> putArtist({
+    required String instaId,
+    required bool force,
+    required String name,
+    required int followers,
+    required List<String> tags,
+    required int rowVersion,
+  });
+  
+  /// DELETE /artist
+  Future<void> deleteArtist({required String instaId, required String reason});
+  
+  /// GET /artist/list
+  Future<List<ArtistEntity>> getArtistList({
+    required String order,
+    String? tags,
+    String? match,
+    String? q,
+    int? pageSize,
+    int? cursor,
+  });
+  
+  /// GET /artist/exists
+  Future<({bool exists, int? id})> getArtistExists({required String instaId});
+  
+  /// POST /artist/restore
+  Future<void> postArtistRestore({required String instaId, int? rowVersion});
+  
+  /// GET /artist/history
+  Future<List<dynamic>> getArtistHistory({required String instaId});
 }

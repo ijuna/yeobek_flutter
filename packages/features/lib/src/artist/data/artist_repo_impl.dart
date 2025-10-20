@@ -12,7 +12,9 @@
 import '../domain/artist_entity.dart';
 import '../domain/artist_repo.dart';
 import 'remote/artist_api.dart';
-import 'remote/dto/artist_dto_remote.dart';
+import 'remote/dto/PostArtistCreateRequestDto.dart';
+import 'remote/dto/PutArtistRequestDto.dart';
+import 'remote/dto/DeleteArtistRequestDto.dart';
 
 final class ArtistRepoImpl implements ArtistRepo {
   final ArtistApi _api;
@@ -21,11 +23,92 @@ final class ArtistRepoImpl implements ArtistRepo {
   const ArtistRepoImpl(this._api);
 
   @override
-  Future<ArtistEntity> getById(int id) async {
-    // 1) 원격 호출 (Retrofit)
-    final dto = await _api.getById(id);
+  Future<String> getArtistPing() async {
+    final dto = await _api.getArtistPing();
+    return dto.artist;
+  }
 
-    // 2) DTO → 도메인 엔티티로 변환(서버 형식을 앱 친화 모델로 정제)
+  @override
+  Future<int> postArtistCreate({
+    required String name,
+    required String instaId,
+    required int followers,
+    required List<String> tags,
+  }) async {
+    final request = PostArtistCreateRequestDto(
+      name: name,
+      instaId: instaId,
+      followers: followers,
+      tags: tags,
+    );
+    final response = await _api.postArtistCreate(request);
+    return response.id;
+  }
+
+  @override
+  Future<ArtistEntity> getArtist({String? instaId, String? name}) async {
+    final dto = await _api.getArtist(instaId: instaId, name: name);
     return dto.toDomain();
+  }
+
+  @override
+  Future<void> putArtist({
+    required String instaId,
+    required bool force,
+    required String name,
+    required int followers,
+    required List<String> tags,
+    required int rowVersion,
+  }) async {
+    final request = PutArtistRequestDto(
+      name: name,
+      followers: followers,
+      tags: tags,
+      rowVersion: rowVersion,
+    );
+    await _api.putArtist(instaId, force, request);
+  }
+
+  @override
+  Future<void> deleteArtist({required String instaId, required String reason}) async {
+    final request = DeleteArtistRequestDto(reason: reason);
+    await _api.deleteArtist(instaId, request);
+  }
+
+  @override
+  Future<List<ArtistEntity>> getArtistList({
+    required String order,
+    String? tags,
+    String? match,
+    String? q,
+    int? pageSize,
+    int? cursor,
+  }) async {
+    final dto = await _api.getArtistList(
+      order: order,
+      tags: tags,
+      match: match,
+      q: q,
+      pageSize: pageSize,
+      cursor: cursor,
+    );
+    return dto.items.map((item) => item.toDomain()).toList();
+  }
+
+  @override
+  Future<({bool exists, int? id})> getArtistExists({required String instaId}) async {
+    final dto = await _api.getArtistExists(instaId);
+    return (exists: dto.exists, id: dto.id);
+  }
+
+  @override
+  Future<void> postArtistRestore({required String instaId, int? rowVersion}) async {
+    await _api.postArtistRestore(instaId, rowVersion);
+  }
+
+  @override
+  Future<List<dynamic>> getArtistHistory({required String instaId}) async {
+    final dto = await _api.getArtistHistory(instaId);
+    return dto.items;
   }
 }
