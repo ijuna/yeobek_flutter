@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d55ab40c-fca0-4e36-bdf6-bbc69a8994ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/analysis-options.yaml" afterDir="false" />
+    <list default="true" id="d55ab40c-fca0-4e36-bdf6-bbc69a8994ed" name="Changes" comment="m">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_web/readgpt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/analysis_options.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_web/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/src/adapters/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_web/test/main_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/src/app/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/run_app_web_tests.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/src/app/app_web.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/src/localization/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/src/logging/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/src/routing/app_router.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_web/lib/src/routing/routes/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/network/lib/network.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network/lib/network.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +70,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHELLCHECK.PATH": "/Users/Juna/Library/Application Support/Google/AndroidStudio2025.1.3/plugins/Shell Script/shellcheck",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
@@ -97,6 +110,15 @@
       <option name="presentableId" value="Default" />
       <updated>1760446789148</updated>
     </task>
+    <task id="LOCAL-00001" summary="m">
+      <option name="closed" value="true" />
+      <created>1760766069231</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760766069231</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,5 +131,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="m" />
+    <option name="LAST_COMMIT_MESSAGE" value="m" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/apps/app_web/lib/src/app/app_web.dart</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/apps/app_web/lib/src/app/app_web.dart</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

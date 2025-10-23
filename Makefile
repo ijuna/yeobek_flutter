@@ -50,6 +50,8 @@ go1:
 
 .PHONY: go1
 
+test:
+	flutter run -d chrome --target test/main_test.dart
 
 
 #

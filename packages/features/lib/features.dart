@@ -2,15 +2,15 @@
 // artist
 export 'src/artist/domain/artist_entity.dart';
 export 'src/artist/domain/artist_repo.dart';
-export 'src/artist/domain/usecases/getArtistPing.dart';
-export 'src/artist/domain/usecases/postArtistCreate.dart';
-export 'src/artist/domain/usecases/getArtist.dart';
-export 'src/artist/domain/usecases/putArtist.dart';
-export 'src/artist/domain/usecases/deleteArtist.dart';
-export 'src/artist/domain/usecases/getArtistList.dart';
-export 'src/artist/domain/usecases/getArtistExists.dart';
-export 'src/artist/domain/usecases/postArtistRestore.dart';
-export 'src/artist/domain/usecases/getArtistHistory.dart';
+export 'src/artist/domain/usecases/GetArtistPing.dart';
+export 'src/artist/domain/usecases/PostArtistCreate.dart';
+export 'src/artist/domain/usecases/GetArtist.dart';
+export 'src/artist/domain/usecases/PutArtist.dart';
+export 'src/artist/domain/usecases/DeleteArtist.dart';
+export 'src/artist/domain/usecases/GetArtistList.dart';
+export 'src/artist/domain/usecases/GetArtistExists.dart';
+export 'src/artist/domain/usecases/PostArtistRestore.dart';
+export 'src/artist/domain/usecases/GetArtistHistory.dart';
 export 'src/artist/presentation/artist_screen.dart';
 export 'artist_module.dart';
 

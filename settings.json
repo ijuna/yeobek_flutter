@@ -1,0 +1,208 @@
+{
+        // 폴더 트리 들여쓰기 간격 (기본 8). 16~24 정도 추천.
+    "workbench.tree.indent": 20,
+
+    // 트리 가이드 라인 항상 보이게
+    "workbench.tree.renderIndentGuides": "always",
+
+    // 압축 폴더 끄기: 한 줄에 "a > b > c"로 붙는 거 풀어서 계층이 확 보임
+    "explorer.compactFolders": false,
+
+    // 전체 UI 살짝 확대 (원하면) — 익스플로러 가독성↑
+    "window.zoomLevel": 1,
+
+    "workbench.colorTheme": "Dracula Theme",
+    "python.defaultInterpreterPath": "/opt/anaconda3/envs/junaconda/bin/python3",
+    "python.terminal.activateEnvironment": true,
+    "copy-syntax.defaults.lang": "python",
+    "copy-syntax.defaults.format": "rtf",
+    "copy-syntax.forcePythonInterpreter": true,
+    "copy-syntax.formatters.rtf": {
+        "style": "default",
+        "fontsize": 24,
+        "fontface": "Monaco"
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "copy-syntax.defaults.lang",
+        "copy-syntax.defaults.python",
+        "copy-syntax.defaults.format"
+    ],
+    "copy-syntax.mapping.fileExtension": {
+        "ts": "javascript"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "/opt/anaconda3/envs/junaconda/bin"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "/opt/anaconda3/envs/junaconda/bin"
+    },
+    "highlight.regexes": {
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#ffcc00",
+                    "backgroundColor": "#ffcc00",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#ffcc00",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#cc0000",
+                    "backgroundColor": "#cc0000",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#cc0000",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#00ccff",
+                    "backgroundColor": "#00ccff",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#00ccff",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#cc00cc",
+                    "backgroundColor": "#cc00cc",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#cc00cc",
+                    "color": "#1f1f1f"
+                }
+            ]
+        }
+    },
+    "print.folder.fileNames": true,
+    "print.folder.include": [],
+    "print.folder.exclude": [
+        "{bin,obj,out}",
+        "node_modules",
+        "data",
+        "**/*.{bin,exe,dll,hex,pdb,pdf,pfx,png,jpg,gif,bmp,suo,design}"
+    ],
+    "print.folder.maxLines": 1200,
+    "print.folder.maxFiles": 30,
+    "print.folder.includeFileList": false,
+    "jupyter.askForKernelRestart": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "workbench.iconTheme": "file-icons",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.tools.terminal.autoApprove": {
+        "dart": true,
+        "/bin/zsh": true,
+        "flutter": true,
+        "brew": true,
+        "/bin/zsh -lc \"curl -s -X POST http://43.201.80.55/artist/create -H \\\"Content-Type: application/json\\\" --data-raw '{\\\"name\\\":\\\"cli test\\\",\\\"instaId\\\":\\\"cli_test_123\\\",\\\"followers\\\":0,\\\"tags\\\":[\\\"string\\\"]}' -w \\\"\\\\nHTTP_STATUS:%{http_code}\\\\n\\\"\"": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "python main.py": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "curl -sS http://127.0.0.1:8000/artist/ping && echo && curl -sS \"http://127.0.0.1:8000/artist/list?order=followers_desc&page_size=3\"": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "curl -sS http://127.0.0.1:8000/artist/ping && echo && curl -sS http://127.0.0.1:8000/auth/ping && echo && curl -sS http://127.0.0.1:8000/example/ping": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "python -m uvicorn app.server:app --reload": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "curl -s -X POST http://127.0.0.1:8000/artist/create -H 'accept: application/json' -H 'Content-Type: application/json' -d '{\"name\":\"string\",\"instaId\":\"E.ntZfv.iRwTFuJisNN9.bUcViW\",\"followers\":0,\"tags\":[\"string\"]}' -D -": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "\"name\":\"testcurl\",\"instaId\":\"curl123\",\"followers\":100,\"tags\":[\"test\"]}'": true,
+        "'name':'updatedName','rowVersion':1})": true,
+        "cd /Volumes/Juna/junaworld_beta && python -c \"\nfrom app.server import app\nfrom fastapi.testclient import TestClient\nclient = TestClient(app)\nresp = client.get('/artist/history?instaId=abc123')\nprint('STATUS:', resp.status_code)\nimport json\nprint('BODY:', json.dumps(resp.json(), indent=2))\n\"": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^\\s*rm(\\s|$)/": false,
+    "/^\\s*rmdir(\\s|$)/": false,
+    "/^\\s*unlink(\\s|$)/": false,
+    "/^\\s*mv(\\s|$)/": false,
+
+    "/^\\s*chmod\\s+-R\\b/": false,
+    "/^\\s*chown\\s+-R\\b/": false,
+    "/^\\s*chgrp\\s+-R\\b/": false,
+    "/^\\s*truncate\\b/": false,
+    "/^\\s*shred\\b/": false,
+
+    "/^\\s*(shutdown|reboot|halt|poweroff)\\b/": false,
+    "/^\\s*systemctl\\s+(reboot|poweroff|halt)\\b/": false,
+
+    "/^\\s*(sudo|doas)\\b/": false,
+
+    "/^\\s*(ssh|scp|sftp)\\b/": false,
+    "/^\\s*rsync\\b.*(-e\\s+ssh|@)/": false,
+
+    "/^\\s*(curl|wget)\\b(?!\\s+(https?:\\/\\/(localhost|127\\.0\\.0\\.1|0\\.0\\.0\\.0)(:\\d+)?\\b))/": false,
+
+    "/^\\s*git\\s+push\\s+--force(?!-with-lease)\\b/": false,
+    "/^\\s*git\\s+push\\s+--force-with-lease\\b/": false,
+    "/^\\s*git\\s+reset\\s+--hard\\b/": false,
+    "/^\\s*git\\s+clean\\s+-fdx\\b/": false,
+
+    "/^\\s*docker\\s+system\\s+prune\\b.*-a\\b/": false,
+    "/^\\s*docker\\s+(image\\s+rm|rmi)\\b.*-f\\b/": false,
+    "/^\\s*docker\\s+(container\\s+prune|volume\\s+prune)\\b/": false,
+    "/^\\s*docker\\s+compose\\s+down\\b.*(-v|--volumes)\\b/": false,
+
+    "/^\\s*kubectl\\s+delete\\b.*--all\\b/": false,
+
+    "/^\\s*dd\\b/": false,
+    "/^\\s*(mkfs|fdisk|parted|wipefs)\\b/": false,
+
+    "/^\\s*(iptables|ufw)\\b/": false,
+
+    "/^\\s*kill\\s+-9\\s+-1\\b/": false,
+    "/^\\s*pkill\\s+-9\\b/": false
+    }
+}
+

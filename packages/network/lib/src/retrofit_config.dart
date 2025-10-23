@@ -26,20 +26,19 @@ List<Interceptor> buildRetrofitInterceptors({
   }
 
   if (retryCount > 0) {
-    list.add(_RetryInterceptor(
-      retryCount: retryCount,
-      dio: dioForRetry,
-    ));
+    list.add(_RetryInterceptor(retryCount: retryCount, dio: dioForRetry));
   }
 
   if (enableLogging) {
-    list.add(LogInterceptor(
-      requestHeader: false,
-      responseHeader: false,
-      requestBody: true,
-      responseBody: true,
-      error: true,
-    ));
+    list.add(
+      LogInterceptor(
+        requestHeader: false,
+        responseHeader: false,
+        requestBody: true,
+        responseBody: true,
+        error: true,
+      ),
+    );
   }
 
   return list;
@@ -53,9 +52,9 @@ class _AuthTokenInterceptor extends Interceptor {
 
   @override
   Future<void> onRequest(
-      RequestOptions options,
-      RequestInterceptorHandler handler,
-      ) async {
+    RequestOptions options,
+    RequestInterceptorHandler handler,
+  ) async {
     try {
       final token = await _provider();
       if (token != null && token.isNotEmpty) {
@@ -71,10 +70,7 @@ class _AuthTokenInterceptor extends Interceptor {
 /// 아주 단순한 지수 백오프 재시도.
 /// - 타임아웃/연결 오류/5xx만 재시도
 class _RetryInterceptor extends Interceptor {
-  _RetryInterceptor({
-    required this.retryCount,
-    Dio? dio,
-  }) : _dio = dio;
+  _RetryInterceptor({required this.retryCount, Dio? dio}) : _dio = dio;
 
   final int retryCount;
   final Dio? _dio; // 없으면 err.requestOptions을 통해 얻기 시도
@@ -99,9 +95,9 @@ class _RetryInterceptor extends Interceptor {
 
   @override
   Future<void> onError(
-      DioException err,
-      ErrorInterceptorHandler handler,
-      ) async {
+    DioException err,
+    ErrorInterceptorHandler handler,
+  ) async {
     final req = err.requestOptions;
     final current = (req.extra[_retryKey] as int?) ?? 0;
 

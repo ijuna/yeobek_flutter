@@ -5,8 +5,6 @@ class HomePage extends StatelessWidget {
   const HomePage({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text('Hello, Juna — baseline home')),
-    );
+    return const Scaffold(body: Center(child: Text('Hello, Juna — baseline home')));
   }
 }

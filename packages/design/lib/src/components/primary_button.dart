@@ -7,9 +7,6 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FilledButton(
-      onPressed: onPressed,
-      child: Text(label),
-    );
+    return FilledButton(onPressed: onPressed, child: Text(label));
   }
 }

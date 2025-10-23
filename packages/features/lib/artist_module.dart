@@ -12,15 +12,15 @@ import 'package:dio/dio.dart';
 import 'package:network/network.dart';
 
 import 'src/artist/domain/artist_repo.dart';
-import 'src/artist/domain/usecases/getArtistPing.dart';
-import 'src/artist/domain/usecases/postArtistCreate.dart';
-import 'src/artist/domain/usecases/getArtist.dart';
-import 'src/artist/domain/usecases/putArtist.dart';
-import 'src/artist/domain/usecases/deleteArtist.dart';
-import 'src/artist/domain/usecases/getArtistList.dart';
-import 'src/artist/domain/usecases/getArtistExists.dart';
-import 'src/artist/domain/usecases/postArtistRestore.dart';
-import 'src/artist/domain/usecases/getArtistHistory.dart';
+import 'src/artist/domain/usecases/GetArtistPing.dart';
+import 'src/artist/domain/usecases/PostArtistCreate.dart';
+import 'src/artist/domain/usecases/GetArtist.dart';
+import 'src/artist/domain/usecases/PutArtist.dart';
+import 'src/artist/domain/usecases/DeleteArtist.dart';
+import 'src/artist/domain/usecases/GetArtistList.dart';
+import 'src/artist/domain/usecases/GetArtistExists.dart';
+import 'src/artist/domain/usecases/PostArtistRestore.dart';
+import 'src/artist/domain/usecases/GetArtistHistory.dart';
 import 'src/artist/data/artist_repo_impl.dart';
 import 'src/artist/data/remote/artist_api.dart';
 

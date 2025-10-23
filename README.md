@@ -15,7 +15,7 @@ tattoo_frontend/
 │     └─ pubspec.yaml
 ├─ packages/
 │  ├─ design/                  # 디자인 시스템(공용 UI/테마)
-│  ├─ features/                # 기능 모듈(artist, catalog, post) [경량 스켈레톤]
+│  ├─ features/                # 기능 모듈(artist, artworks, board) [경량 스켈레톤]
 │  ├─ language/                # 로컬라이제이션(ARB + gen-l10n 출력)
 │  ├─ network/                 # Dio 기반 HTTP 클라이언트
 │  ├─ storage_hive/            # Hive 스토리지(모바일/웹 단일 API)
@@ -208,8 +208,8 @@ DioClient(baseUrl: ...) 제공.
    features.dart
    src/
    artist/{domain,data,presentation}/...
-   catalog/{domain,data,presentation}/...
-   post/{domain,data,presentation}/...
+   artworks/{domain,data,presentation}/...
+   board/{domain,data,presentation}/...
 
 
 3분할(도메인/데이터/프리젠테이션) 구조 감 유지.
