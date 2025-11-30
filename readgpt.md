@@ -15,9 +15,10 @@
 ```
 tattoo_frontend/
 ├─ apps/
-│  └─ app_web/                 # 웹 앱 (Flutter Web)
-│     ├─ lib/
-│     └─ pubspec.yaml
+│
+app/                          # 모바일 앱 (Android / iOS)
+├─ lib/
+└─ pubspec.yaml
 ├─ packages/
 │  ├─ design/                  # 디자인 시스템(공용 UI/테마)
 │  ├─ features/                # 기능 모듈(artist 등)
@@ -91,11 +92,14 @@ dart run melos run analyze
 dart run melos run test
 ```
 
-**앱 실행(웹)**
+**앱 실행(모바일)**
 
 ```
-cd apps/app_web
-flutter run -d chrome --dart-define=API_BASE_URL=https://dummyjson.com
+cd app
+# iOS 시뮬레이터 예시
+flutter run -d ios --dart-define=API_BASE_URL=https://dummyjson.com
+# Android 에뮬레이터 예시
+flutter run -d android --dart-define=API_BASE_URL=https://dummyjson.com
 ```
 
 ---
@@ -188,7 +192,7 @@ packages/features/
 ## 5) 앱 코드 연결(예시)
 
 ```dart
-// apps/app_web/lib/main.dart
+// app/lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:features/features.dart';   // 배럴에서 모듈/유즈케이스 export 가정
 import 'package:network/network.dart';

@@ -43,6 +43,7 @@ class GetArtistListItemDto {
   Map<String, dynamic> toJson() => _$GetArtistListItemDtoToJson(this);
 
   ArtistEntity toDomain() => ArtistEntity(
+    artistId: '',
     id: id,
     name: name,
     instaId: instaId,

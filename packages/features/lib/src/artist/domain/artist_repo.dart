@@ -6,28 +6,29 @@ abstract interface class ArtistRepo {
   Future<String> getArtistPing();
   
   /// POST /artist/create
-  Future<int> postArtistCreate({
+  Future<String> postArtistCreate({
     required String name,
     required String instaId,
     required int followers,
     required List<String> tags,
+    String? accessToken,
   });
   
   /// GET /artist?instaId=... 또는 ?name=...
   Future<ArtistEntity> getArtist({String? instaId, String? name});
   
   /// PUT /artist
-  Future<void> putArtist({
+  Future<ArtistEntity> putArtist({
     required String instaId,
-    required bool force,
-    required String name,
-    required int followers,
-    required List<String> tags,
+    String? name,
+    int? followers,
+    List<String>? tags,
     required int rowVersion,
+    String? accessToken,
   });
   
   /// DELETE /artist
-  Future<void> deleteArtist({required String instaId, required String reason});
+  Future<void> deleteArtist({required String instaId, String? comment, String? accessToken});
   
   /// GET /artist/list
   Future<List<ArtistEntity>> getArtistList({
@@ -40,11 +41,17 @@ abstract interface class ArtistRepo {
   });
   
   /// GET /artist/exists
-  Future<({bool exists, int? id})> getArtistExists({required String instaId});
+  Future<({bool exists, String? artistId})> getArtistExists({String? artistId, String? instaId});
   
   /// POST /artist/restore
-  Future<void> postArtistRestore({required String instaId, int? rowVersion});
+  /// 백엔드 호환: revisionId 또는 rowVersion 둘 중 하나 사용
+  Future<ArtistEntity> postArtistRestore({
+    required String instaId,
+    int? revisionId,
+    int? rowVersion,
+    String? accessToken,
+  });
   
   /// GET /artist/history
-  Future<List<dynamic>> getArtistHistory({required String instaId});
+  Future<List<Map<String, dynamic>>> getArtistHistory({String? artistId, String? instaId});
 }

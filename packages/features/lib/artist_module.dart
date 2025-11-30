@@ -22,10 +22,10 @@ import 'src/artist/domain/usecases/GetArtistExists.dart';
 import 'src/artist/domain/usecases/PostArtistRestore.dart';
 import 'src/artist/domain/usecases/GetArtistHistory.dart';
 import 'src/artist/data/artist_repo_impl.dart';
-import 'src/artist/data/remote/artist_api.dart';
+import 'src/artist/data/remote/artist_rest_api.dart';
 
 // 테스트/외부 사용을 위해 API와 DTO도 export
-export 'src/artist/data/remote/artist_api.dart';
+export 'src/artist/data/remote/artist_rest_api.dart';
 export 'src/artist/data/remote/dto/GetArtistPingResponseDto.dart';
 export 'src/artist/data/remote/dto/PostArtistCreateRequestDto.dart';
 export 'src/artist/data/remote/dto/PostArtistCreateResponseDto.dart';
@@ -81,13 +81,13 @@ final class ArtistModule {
     );
   }
 
-  factory ArtistModule.fromApi(ArtistApi api) {
+  factory ArtistModule.fromApi(ArtistRestApi api) {
     final repo = ArtistRepoImpl(api);
     return ArtistModule.fromRepo(repo);
   }
 
   factory ArtistModule.fromDio(Dio dio, {String? baseUrl}) {
-    final api = ArtistApi(dio, baseUrl: baseUrl);
+    final api = ArtistRestApi(dio);
     return ArtistModule.fromApi(api);
   }
 

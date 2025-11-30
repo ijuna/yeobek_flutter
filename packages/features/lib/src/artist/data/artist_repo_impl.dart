@@ -1,78 +1,94 @@
-// tattoo_frontend/packages/features/lib/src/artist/data/artist_repo_impl.dart
-//
-// 역할: "데이터 접근의 실행자(Repository 구현)"
-// - 실제로 Retrofit API를 호출(I/O)하고
-// - 서버 JSON(=DTO)을 도메인 엔티티로 변환(toDomain)한 뒤 반환.
-// - 캐시/로컬을 붙이고 싶다면 이 클래스에서 전략을 추가.
-//
-// 중요한 점:
-// - 여기서는 Network.dio를 직접 잡지 않음(조립 책임은 모듈/DI에게).
-// - 반드시 ArtistApi를 "생성자 주입" 받는다.
+// Repository implementation for Artist domain
+
+import 'dart:convert';
+import 'package:dio/dio.dart';
 
 import '../domain/artist_entity.dart';
 import '../domain/artist_repo.dart';
-import 'remote/artist_api.dart';
-import 'remote/dto/PostArtistCreateRequestDto.dart';
-import 'remote/dto/PutArtistRequestDto.dart';
-import 'remote/dto/DeleteArtistRequestDto.dart';
+import 'remote/artist_rest_api.dart';
 
 final class ArtistRepoImpl implements ArtistRepo {
-  final ArtistApi _api;
+  final ArtistRestApi _api;
 
-  /// ArtistApi는 외부(모듈/DI)에서 만들어 주입한다.
   const ArtistRepoImpl(this._api);
 
   @override
   Future<String> getArtistPing() async {
-    final dto = await _api.getArtistPing();
-    return dto.artist;
+    final r = await _api.getPing();
+    final m = _asMap(r.data);
+    return (m['artist'] ?? m['ping'] ?? 'ok').toString();
   }
 
   @override
-  Future<int> postArtistCreate({
+  Future<String> postArtistCreate({
     required String name,
     required String instaId,
     required int followers,
     required List<String> tags,
+    String? accessToken,
   }) async {
-    final request = PostArtistCreateRequestDto(
+    final r = await _api.postCreate(
       name: name,
       instaId: instaId,
       followers: followers,
       tags: tags,
+      accessToken: accessToken,
     );
-    final response = await _api.postArtistCreate(request);
-    return response.id;
+    final m = _asMap(r.data);
+    return (m['artistId'] ?? m['id'] ?? '').toString();
   }
 
   @override
   Future<ArtistEntity> getArtist({String? instaId, String? name}) async {
-    final dto = await _api.getArtist(instaId: instaId, name: name);
-    return dto.toDomain();
+    final r = await _api.getArtist(instaId: instaId, name: name);
+    final m = _asMap(r.data);
+    return ArtistEntity(
+      artistId: (m['artistId'] ?? m['id'] ?? '').toString(),
+      id: _asInt(m['id']) ?? 0,
+      name: (m['name'] ?? '').toString(),
+      instaId: (m['instaId'] ?? '').toString(),
+      followers: _asInt(m['followers']) ?? 0,
+      tags: (m['tags'] as List?)?.map((e) => e.toString()).toList() ?? const <String>[],
+      level: _asInt(m['level']) ?? 0,
+      owner: (m['owner'] as bool?) ?? false,
+      rowVersion: _asInt(m['rowVersion']) ?? 1,
+    );
   }
 
   @override
-  Future<void> putArtist({
+  Future<ArtistEntity> putArtist({
     required String instaId,
-    required bool force,
-    required String name,
-    required int followers,
-    required List<String> tags,
+    String? name,
+    int? followers,
+    List<String>? tags,
     required int rowVersion,
+    String? accessToken,
   }) async {
-    final request = PutArtistRequestDto(
+    final resp = await _api.putArtist(
+      instaId: instaId,
       name: name,
       followers: followers,
       tags: tags,
       rowVersion: rowVersion,
+      accessToken: accessToken,
     );
-    await _api.putArtist(instaId, force, request);
+    final m = _asMap(resp.data);
+    return ArtistEntity(
+      artistId: (m['artistId'] ?? m['id'] ?? '').toString(),
+      id: _asInt(m['id']) ?? 0,
+      name: (m['name'] ?? name ?? '').toString(),
+      instaId: (m['instaId'] ?? instaId).toString(),
+      followers: _asInt(m['followers']) ?? followers ?? 0,
+      tags: (m['tags'] as List?)?.map((e) => e.toString()).toList() ?? (tags ?? const <String>[]),
+      level: _asInt(m['level']) ?? 0,
+      owner: (m['owner'] as bool?) ?? false,
+      rowVersion: _asInt(m['rowVersion']) ?? rowVersion,
+    );
   }
 
   @override
-  Future<void> deleteArtist({required String instaId, required String reason}) async {
-    final request = DeleteArtistRequestDto(reason: reason);
-    await _api.deleteArtist(instaId, request);
+  Future<void> deleteArtist({required String instaId, String? comment, String? accessToken}) async {
+    await _api.deleteArtist(instaId: instaId, comment: comment, accessToken: accessToken);
   }
 
   @override
@@ -84,31 +100,99 @@ final class ArtistRepoImpl implements ArtistRepo {
     int? pageSize,
     int? cursor,
   }) async {
-    final dto = await _api.getArtistList(
-      order: order,
-      tags: tags,
-      match: match,
-      q: q,
-      pageSize: pageSize,
-      cursor: cursor,
+    final r = await _api.getList(order: order, tags: tags, match: match, q: q, pageSize: pageSize, cursor: cursor);
+    final m = _asMap(r.data);
+    final items = (m['items'] as List?) ?? const [];
+    return items.map((e) {
+      final mm = _asMap(e);
+      return ArtistEntity(
+        artistId: (mm['artistId'] ?? mm['id'] ?? '').toString(),
+        id: _asInt(mm['id']) ?? 0,
+        name: (mm['name'] ?? '').toString(),
+        instaId: (mm['instaId'] ?? '').toString(),
+        followers: _asInt(mm['followers']) ?? 0,
+        tags: (mm['tags'] as List?)?.map((v) => v.toString()).toList() ?? const <String>[],
+        level: _asInt(mm['level']) ?? 0,
+        owner: (mm['owner'] as bool?) ?? false,
+        rowVersion: _asInt(mm['rowVersion']) ?? 1,
+      );
+    }).toList();
+  }
+
+  @override
+  Future<({bool exists, String? artistId})> getArtistExists({String? artistId, String? instaId}) async {
+    Response r;
+    if (artistId != null) {
+      r = await _api.getExistsByArtistId(artistId);
+    } else if (instaId != null) {
+      r = await _api.getExistsByInstaId(instaId);
+    } else {
+      return (exists: false, artistId: null);
+    }
+    final m = _asMap(r.data);
+    return (exists: (m['exists'] as bool?) ?? false, artistId: (m['artistId'] ?? m['id'])?.toString());
+  }
+
+  @override
+  Future<ArtistEntity> postArtistRestore({required String instaId, int? revisionId, int? rowVersion, String? accessToken}) async {
+    final resp = await _api.postRestore(instaId: instaId, revisionId: revisionId, rowVersion: rowVersion, accessToken: accessToken);
+    final root = _asMap(resp.data);
+    // Some backends may nest payload under 'artist' or 'item'
+    final nested = root['artist'] is Map
+        ? Map<String, dynamic>.from(root['artist'] as Map)
+        : root['item'] is Map
+            ? Map<String, dynamic>.from(root['item'] as Map)
+            : root['data'] is Map
+                ? Map<String, dynamic>.from(root['data'] as Map)
+                : <String, dynamic>{};
+    final m = nested.isNotEmpty ? {...root, ...nested} : root;
+    var entity = ArtistEntity(
+      artistId: (m['artistId'] ?? m['id'] ?? '').toString(),
+      id: _asInt(m['id']) ?? 0,
+      name: (m['name'] ?? m['artistName'] ?? '').toString(),
+      instaId: (m['instaId'] ?? '').toString(),
+      followers: _asInt(m['followers']) ?? 0,
+      tags: (m['tags'] as List?)?.map((e) => e.toString()).toList() ?? const <String>[],
+      level: _asInt(m['level']) ?? 0,
+      owner: (m['owner'] as bool?) ?? false,
+      rowVersion: _asInt(m['rowVersion']) ?? 1,
     );
-    return dto.items.map((item) => item.toDomain()).toList();
+    // Fallback: if name is empty, fetch latest artist by instaId
+    if (entity.name.isEmpty) {
+      try {
+        entity = await getArtist(instaId: instaId);
+      } catch (_) {}
+    }
+    return entity;
   }
 
   @override
-  Future<({bool exists, int? id})> getArtistExists({required String instaId}) async {
-    final dto = await _api.getArtistExists(instaId);
-    return (exists: dto.exists, id: dto.id);
+  Future<List<Map<String, dynamic>>> getArtistHistory({String? artistId, String? instaId}) async {
+    Response r;
+    if (artistId != null) {
+      r = await _api.getHistoryByArtistId(artistId);
+    } else if (instaId != null) {
+      r = await _api.getHistoryByInstaId(instaId);
+    } else {
+      return const [];
+    }
+    final m = _asMap(r.data);
+    final list = (m['items'] as List?) ?? const [];
+    return list.map((e) => _asMap(e)).toList();
   }
 
-  @override
-  Future<void> postArtistRestore({required String instaId, int? rowVersion}) async {
-    await _api.postArtistRestore(instaId, rowVersion);
+  Map<String, dynamic> _asMap(Object? data) {
+    if (data is Map<String, dynamic>) return data;
+    if (data is Map) return Map<String, dynamic>.from(data as Map);
+    if (data is String && data.isNotEmpty) {
+      try { return json.decode(data) as Map<String, dynamic>; } catch (_) {}
+    }
+    return <String, dynamic>{};
   }
 
-  @override
-  Future<List<dynamic>> getArtistHistory({required String instaId}) async {
-    final dto = await _api.getArtistHistory(instaId);
-    return dto.items;
+  int? _asInt(Object? v) {
+    if (v == null) return null;
+    if (v is int) return v;
+    return int.tryParse(v.toString());
   }
 }

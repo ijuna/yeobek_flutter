@@ -1,5 +1,20 @@
 class BoardEntity {
-  final String id;
+  final String postId;
   final String title;
-  const BoardEntity(this.id, this.title);
+  final String? contents;
+  final int? boardType;
+  final String? boardId;
+  final String? userId;
+  final int? viewCount;
+  final int? likesCount;
+  const BoardEntity({
+    required this.postId,
+    required this.title,
+    this.contents,
+    this.boardType,
+    this.boardId,
+    this.userId,
+    this.viewCount,
+    this.likesCount,
+  });
 }

@@ -23,7 +23,7 @@ class Network {
       BaseOptions(
         baseUrl: const String.fromEnvironment(
           'API_BASE_URL',
-          defaultValue: 'http://43.201.80.55',
+          defaultValue: 'https://api.yeobek.com',
         ),
         connectTimeout: const Duration(seconds: 10),
         receiveTimeout: const Duration(seconds: 15),

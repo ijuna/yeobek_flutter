@@ -133,7 +133,7 @@
         "/bin/zsh": true,
         "flutter": true,
         "brew": true,
-        "/bin/zsh -lc \"curl -s -X POST http://43.201.80.55/artist/create -H \\\"Content-Type: application/json\\\" --data-raw '{\\\"name\\\":\\\"cli test\\\",\\\"instaId\\\":\\\"cli_test_123\\\",\\\"followers\\\":0,\\\"tags\\\":[\\\"string\\\"]}' -w \\\"\\\\nHTTP_STATUS:%{http_code}\\\\n\\\"\"": {
+    "/bin/zsh -lc \"curl -s -X POST https://api.yeobek.com/artist/create -H \\\"Content-Type: application/json\\\" --data-raw '{\\\"name\\\":\\\"cli test\\\",\\\"instaId\\\":\\\"cli_test_123\\\",\\\"followers\\\":0,\\\"tags\\\":[\\\"string\\\"]}' -w \\\"\\\\nHTTP_STATUS:%{http_code}\\\\n\\\"\"": {
             "approve": true,
             "matchCommandLine": true
         },

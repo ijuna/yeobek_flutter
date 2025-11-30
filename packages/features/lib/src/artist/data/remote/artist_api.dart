@@ -84,9 +84,11 @@ abstract class ArtistApi {
   Future<GetArtistExistsResponseDto> getArtistExists(@Query('instaId') String instaId);
 
   /// POST /artist/restore
+  /// 백엔드가 revisionId 또는 rowVersion 중 하나를 사용할 수 있어 둘 다 허용
   @POST('/artist/restore')
   Future<PostArtistRestoreResponseDto> postArtistRestore(
     @Query('instaId') String instaId,
+    @Query('revisionId') int? revisionId,
     @Query('rowVersion') int? rowVersion,
   );
 

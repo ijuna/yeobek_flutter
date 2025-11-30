@@ -1,0 +1,55 @@
+name: Features Integration Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      api_base_url:
+        description: "API base URL (e.g., https://api.yeobek.com)"
+        required: false
+  default: "https://api.yeobek.com"
+  push:
+    paths:
+      - 'packages/features/test/integration/**'
+      - 'packages/features/lib/**'
+      - 'packages/network/lib/**'
+      - '.github/workflows/features-integration.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+  API_BASE_URL: ${{ github.event.inputs.api_base_url || 'https://api.yeobek.com' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Flutter/Dart Versions
+        run: |
+          flutter --version
+          dart --version
+
+      - name: Install Melos
+        run: dart pub global activate melos
+
+      - name: Bootstrap Workspace
+        run: dart run melos bootstrap
+
+      - name: Ping API server
+        run: |
+          echo "Checking API at $API_BASE_URL"
+          (curl -fsS "$API_BASE_URL/ping" || curl -fsS "$API_BASE_URL/healthz") >/dev/null
+
+      - name: Run Features Integration Tests
+        working-directory: packages/features
+        run: |
+          flutter test \
+            --dart-define=API_BASE_URL=$API_BASE_URL \
+            -r expanded \
+            test/integration

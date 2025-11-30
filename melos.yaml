@@ -1,7 +1,7 @@
 # melos.yaml
 name: tattoo_frontend
 packages:
-  - apps/**
+  - app
   - packages/core_domain
   - packages/core_interfaces
   - packages/core_utils

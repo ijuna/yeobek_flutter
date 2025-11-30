@@ -9,10 +9,9 @@ environment.sdk: ">=3.9.0 <4.0.0" (Dart 3 계열 기준)
 
 폴더 구조(최상위)
 tattoo_frontend/
-├─ apps/
-│  └─ app_web/                 # 웹 앱 (Flutter Web)
-│     ├─ lib/
-│     └─ pubspec.yaml
+├─ app/                        # 모바일 앱 (Android / iOS)
+│  ├─ lib/
+│  └─ pubspec.yaml
 ├─ packages/
 │  ├─ design/                  # 디자인 시스템(공용 UI/테마)
 │  ├─ features/                # 기능 모듈(artist, artworks, board) [경량 스켈레톤]
@@ -25,15 +24,15 @@ tattoo_frontend/
 │  └─ observability/           # 로깅/관측성
 ├─ melos.yaml                  # 모노레포 설정/스크립트
 └─ README.md                   # (이 문서)
-
-
+```
+cd app
 규칙: 라이브러리 패키지의 공개 API는 lib/<barrel>.dart 에서 export, 구현은 lib/src/** 에 둡니다. 외부에서 package:xxx/src/... 경로로 직접 import 금지.
 
 멜로스(Melos) 설정
 
 melos.yaml 주요 내용:
 
-name: tattoo_frontend
+앱이 사용하는 공용 패키지 의존은 app/pubspec.yaml에 path:로 연결:
 
 packages:
 - apps/**
@@ -81,12 +80,16 @@ dart run melos run analyze
 # 4) 전체 테스트
 dart run melos run test
 
-앱 구동(웹)
-cd apps/app_web
-flutter run -d chrome
+앱 실행(모바일)
 
-
-앱이 사용하는 공용 패키지 의존은 apps/app_web/pubspec.yaml에 path:로 연결:
+```
+cd app
+# 예시) iOS 시뮬레이터
+flutter run -d ios
+# 예시) Android 에뮬레이터
+flutter run -d android
+```
+앱이 사용하는 공용 패키지 의존은 app/pubspec.yaml에 path:로 연결:
 
 dependencies:
 flutter:

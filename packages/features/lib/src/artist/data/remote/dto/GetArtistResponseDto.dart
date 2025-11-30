@@ -29,6 +29,7 @@ class GetArtistResponseDto {
   Map<String, dynamic> toJson() => _$GetArtistResponseDtoToJson(this);
 
   ArtistEntity toDomain() => ArtistEntity(
+    artistId: '',
     id: id,
     name: name,
     instaId: instaId,

@@ -1,5 +1,6 @@
 // tattoo_frontend/packages/features/lib/src/artist/domain/artist_entity.dart
 final class ArtistEntity {
+  final String artistId;
   final int id;
   final String name;
   final String instaId;
@@ -11,6 +12,7 @@ final class ArtistEntity {
 
   /// 불변 객체로 다루기 위해 final + const 생성자를 사용.
   const ArtistEntity({
+    required this.artistId,
     required this.id,
     required this.name,
     required this.instaId,
